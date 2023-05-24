@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startScreen">
+
+    <fragment
+        android:id="@+id/startScreen"
+        android:name="com.example.tasker.StartFragment"
+        android:label="Start screen"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/navigate_startScreen_to_projectsScreen"
+            app:destination="@id/projectsScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/projectsScreen"
+        android:name="com.example.tasker.CategoriesFragment"
+        android:label="Projects Screen"
+        tools:layout="@layout/fragment_projects">
+        <action
+            android:id="@+id/navigate_categoriesScreen_to_notesScreen"
+            app:destination="@id/notesScreen">
+            <argument
+                android:name="project_title"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigate_categoryScreen_to_addCategoryName"
+            app:destination="@id/add_category_screen">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_category_screen"
+        android:name="com.example.tasker.AddCategoryFragment"
+        android:label="Add Category Screen"
+        tools:layout="@layout/fragment_add_category" />
+
+    <fragment
+        android:id="@+id/notesScreen"
+        android:name="com.example.tasker.NotesFragment"
+        android:label="Notes Screen"
+        tools:layout="@layout/fragment_notes">
+        <action
+            android:id="@+id/navigate_notesScreen_to_addNoteScreen"
+            app:destination="@id/addNoteScreen">
+            <argument
+                android:name="project_title"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addNoteScreen"
+        android:name="com.example.tasker.AddNoteFragment"
+        android:label="Add Note Screen"
+        tools:layout="@layout/fragment_add_note" />
+
+</navigation>

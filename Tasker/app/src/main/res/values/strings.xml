@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tasker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tasks_category">Категории задач</string>
+    <string name="current_tasks">Текущие задачи</string>
+    <string name="done_tasks">Выполненные задачи</string>
+    <string name="university">Университет</string>
+    <string name="add_note">Добавить задание</string>
+    <string name="input_task_text">Введите текст задания:</string>
+    <string name="input_deadline">Выберите дату выполнения</string>
+    <string name="add_category">Добавить категорию</string>
+    <string name="input_category_name">Введите название категории</string>
+    <string name="completed_tasks">Выполненные задачи</string>
+</resources>
